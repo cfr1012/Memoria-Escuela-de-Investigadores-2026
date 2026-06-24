@@ -1,0 +1,583 @@
+---
+output:
+  pdf_document: default
+  word_document: default
+numbersections: true
+header-includes:
+- \usepackage{pdfpages}
+- \usepackage[spanish]{babel}
+- "\\makeatletter\n\\renewcommand{\\paragraph}{\\@startsection{paragraph}{4}{\\z@}\n
+  \ {-3.25ex\\@plus -1ex \\@minus -.2ex}\n  {1.5ex \\@plus .2ex}\n  {\\normalfont\\normalsize\\bfseries}}\n\\makeatother\n"
+---
+
+```{=latex}
+\includepdf[pages=1,fitpaper=true]{Portada.pdf}
+\clearpage
+\renewcommand{\contentsname}{Índice}
+\setcounter{tocdepth}{4}
+\tableofcontents
+\clearpage
+```
+
+\newpage
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+# Introducción
+
+La presente memoria tiene como objetivo reflejar las actividades desarrolladas durante mi estancia en el **grupo de investigación BEST-AI**, en el marco de la *Beca de la Escuela de Investigadores de la Universidad de Burgos*, correspondiente al año 2026.
+
+La *Beca de la Escuela de Investigadores de la Universidad de Burgos* es una iniciativa cofinanciada por el **Banco Santander** e impulsada por la **Universidad de Burgos**. Su finalidad es acercar a los estudiantes de grado a la actividad investigadora mediante su **integración activa** en diversos Grupos de Investigación Reconocidos *(GIR)*, promoviendo así la adquisición de competencias científicas y técnicas propias de este ámbito. La estancia en un entorno real de investigación fortalece la formación académica de los estudiantes,  promoviendo la consolidación de una temprana vocación investigadora y la creación de una comunidad académica orientada a la generación del conocimiento, la innovación y la transferencia tecnológica.
+
+Entre los distintos *GIR*, esta beca me brindó la oportunidad de incorporarme al grupo de investigación **BEST-AI**, por sus siglas *Biología, Educación y Salud con Tecnologías Avanzadas Informáticas*. Se trata de un Grupo de Investigación Reconocido de la Universidad de Burgos constituido en el año **2019** y adscrito, principalmente, a los departamentos de **Ingeniería Informática e Ingeniería Civil**. Su línea de investigación se centra en el desarrollo y la aplicación de técnicas de Inteligencia Artificial *(IA)*, aprendizaje automático y minería de datos en la resolución de problemas en diversos ámbitos, tales como la salud, biología, medioambiente y educación. Su **carácter multidisciplinar** favorece la colaboración con investigadores de diversas áreas de conocimiento,  además de colaboraciones con diversas instituciones internacionales, como *Bangor University* en Reino Unido, *Texas A&M University System* en Estados Unidos o *Tokyo Institute of Technology* en Japón, lo que le permite abordar problemas complejos mediante enfoques innovadores. Actualmente cuentan con una destacada producción científica que incluye más de **60 artículos publicados** y más de **40 participaciones en varios congresos** de temáticas multidisciplinares. 
+
+En el marco de esta actividad investigadora, tuve la oportunidad de integrarme en la dinámica de trabajo del grupo y participar activamente en algunas de sus líneas de investigación. En concreto, trabajé de primera mano con el docente e investigador **Antonio J. Canepa Oneto**, que me permitió colaborar, bajo su supervisión, en **dos iniciativas** que coordinaba. La primera iniciativa consistió en la publicación de una **Nota Ecoinformática** en una **revista indexada**.  Este proyecto estaba centrado en el estudio de las diversas herramientas software disponibles en el ecosistema del **lenguaje de programación R**, abordando la problemática derivada de la gran cantidad de paquetes existentes y la necesidad de facilitar su identificación y filtrado por parte de la comunidad investigadora. La segunda iniciativa se enmarcaba en **El Observatorio de Biodiversidad**, un proyecto financiado por la Unión Europea a través de **NextGenerationEU** dentro del *Plan de Recuperación, Transformación y Resiliencia.* Este proyecto tiene como finalidad el desarrollo de herramientas y procedimientos que permitan realizar un **seguimiento sistemático** del estado de la biodiversidad y de la calidad ambiental, mediante la definición de indicadores, la recopilación de datos y la evaluación de actuaciones orientadas a la **conservación y gestión sostenible** de los ecosistemas fluviales.
+
+La participación en dicho grupo de investigación se ha desarrollado entre los meses de marzo y junio de 2026, período durante el cual se han llevado a cabo múltiples actividades focalizadas en el ámbito de la investigación y el desarrollo tecnológico. Estas actividades se enmarcan en los **dos proyectos** anteriormente descritos, cuyos objetivos y desarrollo, así como las contribuciones realizadas, se detallan en apartados posteriores.
+
+En primer lugar, en el correspondiente apartado de **objetivos** se presentan los mismos tanto desde el punto de vista específico de los dos proyectos desarrollados, como desde una perspectiva general vinculada a la experiencia de la beca. Posteriormente, en el apartado de **resultados**, se detallan los proyectos en los que se ha participado, así como las actividades llevadas a cabo junto con sus aportaciones. 
+
+Se finaliza la memoria con una sección de **conclusiones**, en la que se realiza una valoración tanto de los resultados obtenidos en relación con los propuestos en cada proyecto, como de la experiencia global de participación en el grupo de investigación. Asimismo, se incluye un apartado de **agradecimientos**.
+
+Como **material complementario**, esta memoria incorpora una sección de **anexos**, donde se proporciona un enlace al repositorio creado durante la estancia, que recopila los diversos materiales y archivos generados en este marco, así como el manual de configuración de los dispositivos AudioMoth elaborado durante el desarrollo del segundo proyecto.
+
+
+# Objetivos
+
+## Objetivos técnicos
+
+Los objetivos técnicos están centrados en los distintos proyectos en los que se enmarcan las actividades desarrolladas.
+
+Respecto al primer proyecto, se tenía como objetivo principal la participación en un **artículo revisado por pares** para su publicación en una **revista indexada**. Por ello, se consideraban actividades con el objetivo de una **reestructuración y modulación** del código previamente desarrollado, así como la participación en el proceso de revisión por pares propio de la editorial.
+
+Respecto al segundo proyecto, el objetivo era el desarrollo y configuración de herramientas destinadas al **monitoreo acústico**. Se buscaba así alcanzar la funcionalidad de una **estación acústica** que implementase el **software de BirdNET** como sistema de clasificación de la biodiversidad aviar del entorno. Además, también se buscaba automatizar, mediante el diseño algorítmico, la monitorización del ecosistema en su conjunto. Estas tareas formaban parte de una estrategia orientada al establecimiento de **indicadores de biodiversidad** y la implementación de procedimientos de **seguimiento ambiental** que permiten evaluar la eficacia de las actuaciones de mitigación en ecosistemas fluviales.
+
+## Objetivos de aprendizaje
+
+La participación en esta convocatoria presentaba como objetivo principal contribuir a mi formación en el ámbito de la investigación mediante la **integración activa** en un grupo de investigación y la realización de actividades en un entorno de **trabajo real**, bajo la orientación y supervisión de profesionales especializados en el ámbito.
+
+En este sentido, la estancia en el grupo de investigación **BEST-AI** ha supuesto una valiosa oportunidad para conocer de primera mano la dinámica de trabajo propia de la investigación aplicada, permitiéndome participar en proyectos reales y comprender así las distintas fases que conforman la actividad científica. Asimismo, me ha permitido aplicar los conocimientos adquiridos durante mi trayectoria universitaria y ampliar mis competencias mediante **la adquisición de nuevas habilidades técnicas**.
+
+Además de los conocimientos específicos adquiridos durante la estancia, esta experiencia ha fortalecido las llamadas *"soft skills"* que conforman una **mentalidad resolutiva**, **adaptativa** al cambio y **colaborativa** en el equipo, aspectos distintivos en mi futura trayectoria profesional.
+
+# Resultados
+
+Como se ha mencionado con anterioridad, las actividades desarrolladas en colaboración con el grupo de investigación BEST-AI en el contexto de esta beca se estructuraron en torno a **dos proyectos**, dentro de los cuales, se llevaron a cabo **tres actividades principales**, cuyos objetivos, desarrollo y contribuciones se detallan en apartados siguientes. Para facilitar la comprensión del trabajo realizado, cada proyecto se introduce mediante una breve contextualización, seguida de la descripción de las actividades desarrolladas y de las aportaciones realizadas.
+
+## Nota Ecoinformática
+
+La primera actividad desarrollada en esta estancia fue la colaboración en el proceso de publicación de una Nota Ecoinformática, bajo el título de *"Revisión sistemática de repositorios de paquetes para el lenguaje R (CRAN, GitHub, Bioconductor)"*, en la **revista científica "Ecosistemas"**. Estas actividades englobaron desde el desarrollo de código hasta el proceso de revisión por pares y la adaptación a la normativa de la editorial.
+
+### Contexto
+
+El docente e investigador Antonio J. Canepa Oneto presentaba una Nota Ecoinformática en proceso de revisión para su publicación. El objetivo de la misma era dar soporte a una **búsqueda sistemática** de repositorios mediante su programación en lenguaje R.
+
+En la *Figura 1* se puede apreciar una captura del repositorio oficial del proyecto. Se puede acceder al mismo a través de este enlace: https://github.com/ajcanepa/NotaEcoinformatica_Revision_Repositorios
+
+![Captura del repositorio oficial de la Nota Ecoinformática](imagenes/Captura repositorio.png){width="12cm" height="6cm"}
+
+En este contexto, el lenguaje de programación R, presenta una gran **diversidad de paquetes** que permiten extender sus funcionalidades y se distribuyen, principalmente, en tres repositorios: CRAN, Bioconductor y  GitHub *(entendiendo repositorio como cualquier plataforma que aloja, distribuye o indexa paquetes de software)*. CRAN y Bioconductor son repositorios que disponen de procesos de revisión y control de calidad, aunque presentan enfoques distintos. **CRAN**, por su parte, es el repositorio general del entorno de R, con un **carácter más amplio**. **Bioconductor** está centrado en el **ámbito de la bioinformática** y presenta estándares de revisión más estrictos. Por el contrario, **GitHub** es una **plataforma de desarrollo** que no cuenta con un procedimiento formal de revisión, siendo utilizada para versiones en desarrollo y distribución de software.
+
+Debido a la **gran cantidad** de paquetes disponibles en estos repositorios, han surgido múltiples aproximaciones para la **sistematización y categorización** de estas herramientas, en las que los paquetes son agrupados por temáticas y usos vinculados. Sin embargo, estas aproximaciones presentan **limitaciones en la clasificación y filtrado** de los paquetes disponibles, que limitan por ello su aplicación real en la investigación, ya que responden a preguntas científicas específicas y no realizan una revisión sistemática de las herramientas
+
+En este contexto, las búsquedas sistémicas son un gran soporte para la **recuperación de información estructurada, transparente y reproducible**, dando evidencia a una investigación específica y **evitando todo tipo de sesgos**. Este tipo de búsquedas emplean una estructura compleja basada en múltiples cadenas de texto unidas por distintos tipos de operadores booleanos, siendo *"or"* y *"and"* los más empleados.
+
+Ahora bien, mientras que múltiples bases de datos del entorno científico las dan soporte, por ejemplo PubMed, a día de hoy **no son reproducibles** en múltiples repositorios. Siendo su máxima aproximación un sistema jerárquico de anotación en la que los paquetes se agrupan en catálogos según palabras clave de búsqueda, popularizado en el repositorio de Bioconductor. Por ello, el objetivo de esta Nota Ecoinformática era la implementación de las búsquedas sistémicas en algunos de los repositorios más empleados en la actualidad: **CRAN, Bioconductor y GitHub**.
+
+### Desarrollo del código en lenguaje R
+
+Partiendo del patrón de búsqueda soportado por cada uno de los repositorios, el objetivo era la creación de **diversas funciones** que permitieran llevar a cabo búsquedas en todos ellos mediante una **misma sintaxis**, sin necesidad de adaptar la query empleada.
+
+Si bien los repositorios permiten realizar un filtrado complejo conociendo su sintaxis específica, resulta inescalable pretender ejecutar una búsqueda sistémica en múltiples repositorios de manera inmediata, ya que el proceso de **adaptación de la query** implica no solo un **factor temporal**, sino también una **alta complejidad** de dominio de las reglas y sintaxis propias de CRAN, Bioconductor y GitHub. Como solución a esta problématica, se generaron 3 funciones *(una por cada repositorio)* que comparten un **mismo motor de búsqueda**. Cada función recibe una query *(consulta)* y aplica un proceso sistemático de filtrado. El procedimiento consta de los siguientes pasos:
+
+**1. Validación de la query**
+
+Se comprueba que el campo no esté vacío y el texto introducido sea de tipo carácter. En caso contrario, se lanza un mensaje de error que alerta al usuario de una llamada incorrecta de la función y se detiene la ejecución.
+
+**2. Normalización de la query**
+
+Las funciones dan soporte a queries en el formato propio de búsqueda de cada repositorio y, además, en formato de búsqueda booleana. Esto permite la creación de consultas con lenguaje natural y operadores lógicos *(and y or)* que facilitan la generación de la query.
+
+**3. Agrupación del contenido**
+
+La información disponible en cada uno de los repositorios se va a reorganizar formando un texto, o conjunto de términos, que contendrán la información relevante de cada uno de los repositorios. De esta forma, se podrá aplicar el criterio de búsqueda y se realizará un filtrado sin importar el formato original de la información.
+
+**4. Motor de filtrado**
+
+La query normalizada se aplica sobre el contenido anteriormente agrupado, realizando una búsqueda por coincidencia exacta de los términos introducidos. Esta coincidencia es sensible a mayúsculas y minúsculas.
+
+**5. Generación de una tabla de resultados**
+
+Por último, cada una de las funciones devuelve un conjunto estructurado de datos en formato de tabla con aquellos que cumplen la coincidencia con la query introducida.
+
+Mediante estas funciones se permite el empleo de los distintos repositorios de **manera transparente a las peculiaridades internas** de cada uno. Para el ejemplo búsqueda se ha empleado la siguiente query : *"alignment or sequence alignment or multiple alignment and pipeline or workflow or nextflow or reproducible workflow or workflow automation"*. El formato de esta es el genérico y por ello, puede ser procesada por las 3 funciones creadas.
+
+#### CRAN
+
+A continuación se muestra cómo se ejecutaría la búsqueda de esta query en el repositorio de **CRAN**. Como se observa en el código, se ejecuta una llamada la función *consulta_CRAN* en R pasando como parámetro la query. Cabe destacarse que poner *"query= '...' "* es optativo, ya que bastaría con pasar la cadena empleada como consulta. Sin embargo, consideramos que esta sintaxis empleada proporciona mayor claridad.
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, size='tiny'}
+#Cargamos la función para unificar las búsquedas
+source('R/consulta_CRAN.R')
+
+# Filtramos sobre CRAN usando una query con operadores booleanos
+Cran_filtrado <- consulta_CRAN(query = "alignment or sequence alignment or multiple
+                               alignment and pipeline or workflow or nextflow or 
+                               reproducible workflow or workflow automation")
+Cran_filtrado
+```
+
+Para que la llamada a la función no cause un error, es necesario cargarla y tener *consulta_CRAN* correctamente definida. En este caso, el código de la misma es el siguiente:
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+#Función para consulta en CRAN
+consulta_CRAN <- function(query=NULL) {
+
+  #Comprobamos que los paquetes necesarios están instalados, sino, se instalan 
+  paquetes <- c("tools", "dplyr", "tibble")
+  for (paquete in paquetes){
+    if(!require(paquete, character.only = TRUE)){
+      utils::install.packages(paquete)
+      library(paquete, character.only = TRUE)
+    }
+  }
+
+  # Cargamos el listado de paquetes desde CRAN
+  Cran <- tools::CRAN_package_db() %>% tibble::as_tibble()
+
+  #Excepción para caso de llamada a función sin query
+  if (base::is.null(query) || !base::is.character(query) || base::trimws(query) == "") {
+    stop("Necesitas entregar un query a la función para realizar el filtrado")
+  }
+
+  # Convertir la query al formato CRAN si no contiene ya | o &
+  if(!base::grepl("\\||&", query)){
+      query <- base::gsub("\\s+or\\s+", "|", query, ignore.case= TRUE)
+      query <- base::gsub("\\s+and\\s+", "&", query, ignore.case= TRUE)
+  }
+  
+  # Dividimos la query en las distintas condiciones unidas por AND 
+  #(funciona con número indefinido de AND)
+  condiciones_AND <- base::strsplit(query, "&")[[1]]
+  condiciones_AND <- base::trimws(condiciones_AND)
+
+  # Filtramos según la búsqueda/query usada
+  Cran_filtrado <- 
+  Cran %>%
+  dplyr::mutate(
+      text = base::paste(Package, Title, Description, sep = " "),
+      keep = base::Reduce(
+        `&`,
+        base::lapply(condiciones_AND, function(g) {
+          base::grepl(g, text, ignore.case = TRUE)
+        })
+      )
+  ) %>%
+  dplyr::filter(keep) %>%
+  dplyr::select(-text, -keep)
+}
+
+```
+
+Como breve explicación de su funcionamiento, caben mencionarse los siguientes aspectos. Primero se comprueba la presencia de los **paquetes requeridos** en el equipo, y en caso de no encontrarse los mismos, se procede a su instalación. Para este repositorio concreto se han considerado indispensables los paquetes de *"tools", "dplyr", "tibble"*; que permiten llevar a cabo las **transformaciones de cadenas** y otras **utilidades auxiliares** *(tools)*, operaciones de **filtrado** y **manipulación de datos** *(dply)* y la representación de la información mediante estructuras tabulares *(tibble)*.
+
+Otro aspecto imprescindible sería la carga del listado de los diversos paquetes disponibles en CRAN, sobre los que se ejecutará el filtrado y búsqueda partiendo de la query introducida. Esto se ejecuta mediante `tools::CRAN_package_db() %>% tibble::as_tibble()`, y serán almacenados en la variable **"Cran"**.
+
+Como se ha mencionado anteriormente, la query puede ser introducida bien en el **formato específico** del repositorio o en su defecto, mediante **operadores booleanos**. Por ello, una vez comprobada que la consulta introducida es válida y no genera una excepción, se comprueba el formato de la misma, y de ser requerido, se procede a su transformación mediante la función `gsub`, que **sustituye los operadores booleanos** junto con sus espacios circundantes por la simbología óptima del repositior *("&" y "\|")*.
+
+Finalmente, simulando el funcionamiento natural de búsqueda del repositorio, se fragmente las distintas condiciones que se hayan separadas por un *and* y se emplean para **filtrar el repositorio** inicialmente descargado. De esta forma, se mostrarán en formato de `data.frame` aquellos resultados que cumplan las condiciones introducidas.
+
+Para una representación más visual de esta información, se ha elaborado el **gráfico de barras** ilustrado en la *Figura 2*, donde se muestran 2 sub-gráficos con información respecto a los paquetes obtenidos como resultado. En el gráfico de la izquierda se ha representado el **número de paquetes** publicados por año. En el de la derecha, el **número de descargas** en la última semana de cada uno de los paquetes obtenidos tras aplicar la búsqueda sistemática de la query introducida.
+
+![Gráficos de barras de los paquetes creados y descargados en CRAN.](imagenes/CRAN_Publicados_Descargados.png)
+
+\newpage
+
+#### Bioconductor
+
+De forma análoga se realiza el filtrado en el repositorio de **Bioconductor**. Como en el caso explicado anteriormente, se efectúa la carga de la función y posteriormente se ejecuta la llamada a esta pasándola como parámetro la query deseada.
+
+```{r, message=FALSE, size= 'tiny', tidy.opts=list(width.cutoff=60), warning=FALSE, eval=FALSE}
+#Cargamos la función para unificar las búsquedas
+source('R/consulta_Bioconductor.R')
+
+# Filtramos sobre Bioconductor usando una query con operadores booleanos
+Bioconductor_filtrado <- consulta_Bioconductor(query = "alignment or sequence alignment 
+                                               or multiple alignment and pipeline or 
+                                               workflow or nextflow or reproducible 
+                                               workflow or workflow automation")
+
+```
+
+Para que la llamada a la función no cause un error, es necesario tener *consulta_Bioconductor* correctamente definida. En este caso, el código de la misma es el siguiente:
+
+```{r, message=FALSE, size= 'tiny', warning=FALSE, eval=FALSE}
+#Función para consulta en Bioconductor
+consulta_Bioconductor <- function(query=NULL) {
+
+  #Comprobamos que los paquetes necesarios están instalados, sino, se instalan 
+  paquetes <- c("BiocPkgTools", "dplyr")
+  for (paquete in paquetes){
+    if(!require(paquete, character.only = TRUE)){
+      utils::install.packages(paquete)
+      library(paquete, character.only = TRUE)
+    }
+  }
+
+  # Cargamos el listado de paquetes desde Bioconductor
+  Bioconductor <- BiocPkgTools::biocPkgList()
+
+  #Excepción para caso de llamada a función sin query
+  if (base::is.null(query) || !base::is.character(query) || base::trimws(query) == "") {
+    stop("Necesitas entregar un query a la función para realizar el filtrado")
+  }
+
+  # Convertir la query al formato Bioconductor si no contiene ya | o &
+  if(!base::grepl("\\||&", query)){
+      query <- base::gsub("\\s+or\\s+", "|", query, ignore.case= TRUE)
+      query <- base::gsub("\\s+and\\s+", "&", query, ignore.case= TRUE)
+  }
+  
+  # Dividimos la query en las distintas condiciones unidas por AND 
+  #(funciona con número indefinido de AND)
+  condiciones_AND <- base::strsplit(query, "&")[[1]]
+  condiciones_AND <- base::trimws(condiciones_AND)
+
+  # Filtramos según la búsqueda/query usada
+  Bioconductor_filtrado <- 
+  Bioconductor %>%
+  dplyr::mutate(
+      text = base::paste(Package, Title, Description, sep = " "),
+      keep = base::Reduce(
+        `&`,
+        base::lapply(condiciones_AND, function(g) {
+          base::grepl(g, text, ignore.case = TRUE)
+        })
+      )
+  ) %>%
+  dplyr::filter(keep) %>%
+  dplyr::select(-text, -keep)
+}
+
+```
+
+Esta función presenta un código y estructura prácticamente idénticos a los empleados en el repositorio de CRAN, pero aplicado a este repositorio concreto. Para ello, se **comprueba e instala**, en caso de no disponer de los mismos, los paquetes de *"BiocPkgTools", "dplyr"*; correspondientes, respectivamente, al **acceso y consulta** de información del propio repositorio y al **manejo, filtrado y transformación de datos tabulares**.
+
+Por otra parte, mediante `BiocPkgTools::biocPkgList()` se carga el listado de los paquetes de Bioconductor sobre los que se realizará la función de filtrado según la query pasada como parámetro. De manera homóloga a la función *consulta_CRAN*, se emplea la función `gsub` en caso de requerirse una transformación de la consulta, y una vez se encuentra en el formato adecuado, se fragmenta tomando el *and* como punto de divisón. Dichos fragmentos son empleados en la función `mutate` para finalmente presentar una **estructura tabular** con el resultado.
+
+De igual forma que en el repositorio CRAN, se han generado gráficos de carácter ilustrativo acerca de la inromación obtenida como resultado. En este caso, se han generado **gráficos de dependencias de paquetes**, que establecen cómo se relacionan entre ellos. En la *Figura 3* se han representado los paquetes que dependen de CircSeqAlignTk, según los resultados obtenidos con la query ilustrativa.
+
+![Gráfico de dependencias de paquetes en Bioconductor](imagenes/Bioconductor_Dependencias.png){width="12cm" height="17cm"}
+
+#### GitHub
+
+Finalmente, se muestra la búsqueda efectuada en el repositorio de **GitHub**. En este caso, la llamada, así como la función en sí misma, son bastante diferentes a los dos casos previos. En primer lugar, se **carga la función** que se va a emplear. A continuación, resulta imprescindible establecer el **Personal Access Token** *(sustituyendo "tu_clave_de_acceso" por la clave personal obtenida desde el propio GitHub)* para permitir el acceso a este repositorio. Finalmente la llamada se ejecuta como en los casos previos, pasando la **query como parámetro**.
+
+
+```{r, message=FALSE, size= 'tiny', warning=FALSE, eval=FALSE}
+#Cargamos la función para unificar las búsquedas
+source('R/consulta_GitHub.R')
+
+# Establecemos el "Personal Access Token" ("Tu clave de acceso personal")
+Sys.setenv(GITHUB_TOKEN = "tu_clave_de_acceso") 
+
+# Filtramos sobre GitHub usando una query con operadores booleanos
+GitHub_filtrado <- consulta_GitHub(query = "alignment or sequence alignment or multiple
+                                   alignment and pipeline or workflow or nextflow or 
+                                   reproducible workflow or workflow automation")
+
+```
+
+Nuevamente es importante tener correctamente definida la función de *consulta_GitHub* para no obtener un error al ejecutar su carga y posterior llamada. El código de la función se muestra a continuación:
+
+```{r, message=FALSE, size= 'tiny', warning=FALSE, eval=FALSE}
+#Función para consulta en GitHub
+consulta_GitHub <- function(query=NULL) {
+
+  #Comprobamos que los paquetes necesarios están instalados, sino, se instalan 
+  paquetes <- c("gh", "purrr", "dplyr", "tibble")
+  for (paquete in paquetes){
+    if(!require(paquete, character.only = TRUE)){
+      utils::install.packages(paquete)
+      library(paquete, character.only = TRUE)
+    }
+  }
+
+   #Excepción para caso de llamada a función sin query
+  if (base::is.null(query) || !base::is.character(query) || base::trimws(query) == "") {
+    stop("Necesitas entregar un query a la función para realizar el filtrado")
+  }
+
+  # Convertir la query al formato GitHub si no lo está ya
+  if(!base::grepl('^c\\(\\s*(\\".*?\\"\\s*(,\\s*\\".*?\\"\\s*)*)\\)$', query)){
+    condiciones_AND <- base::strsplit(query, "and")[[1]]
+    condiciones_AND <- base::trimws(condiciones_AND)
+
+    condiciones_OR <- base::lapply(condiciones_AND, function(g) {
+      terms <- base::strsplit(g, "or")[[1]]
+      base::trimws(terms)
+    })
+  }
+  # La query equivalente se ha de realizar combinando los strings del OR y uniéndolos luego 
+  #(equivalencia con el AND)
+  combinaciones <- base::expand.grid(condiciones_OR, stringsAsFactors = FALSE)
+
+  # Generamos la query
+  queries <- base::apply(combinaciones, 1, function(row) {
+    terms <- base::paste(row, collapse = " ")
+    base::paste(terms, "in:name,description,readme", "language:R")
+
+  })
+
+  # Ahora se itera entre las variables con las palabras clave (equivalente al AND)
+  results <- purrr::map(queries, function(x) {
+    gh::gh("/search/repositories", q = x, sort = "stars", order = "desc", per_page = 500)
+  })
+
+# Almacenamos las listas de los resultados en un objeto de tipo data.frame
+repo_df <- 
+  results %>%
+  map("items") %>%
+  flatten() %>%
+  unique() %>%
+  map_df(function(x) {
+    tibble::tibble(
+      name = x$name,
+      full_name = x$full_name,
+      description = x$description,
+      url = x$html_url,
+      stars = x$stargazers_count,
+      language = x$language,
+      license = safely(~ x$license$name)(x)$result, # Extracción de licencia de forma segura
+      owner = safely(~ x$owner$login)(x)$result,    # Extracción del inicio de sesión 
+      created_at = x$created_at,
+      updated_at = x$updated_at,
+      pushed_at = x$pushed_at,
+      forks = x$forks_count,
+      open_issues = x$open_issues_count,
+      size = x$size,
+      watchers = x$watchers_count,
+      has_issues = x$has_issues,
+      has_wiki = x$has_wiki,
+      has_pages = x$has_pages
+    )
+  })
+return(repo_df)
+  
+}
+
+```
+
+Como aspectos relevantes de esta función, cabe destacar lo siguiente. Primero de todo, se comprueba la presencia de los paquetes `"gh", "purrr", "dplyr", "tibble"`, empleados, respectivamente, para **consultar la API de GitHub**, la **iteracción funcional** y el **filtrado, transformación y representación** en estructuras tabulares. Nuevamente, comprobamos que la query sea válida y después verificamos el formato en el que se encuentra. En caso de estar en la sintaxis de GitHub se empleará directamente como parámetro, en caso contrario, requiere de su transformación. A diferencia de las anteriores funciones, para modificar la query se emplea la función `strsplit` para su fragmentación, tomando el *and* como punto de división. Mediante la función `trimws()` se eliminan los espacios circundantes. Sin embargo, en el caso de GitHub estos fragmentos aún no pueden ser empleados para filtrar el repositorio, sino que se deben **generar todas las posibles combinaciones** de fragmentos. Esto implica combinar aquellas partes separadas por el operador *or* y unirlas con el resto de la consulta mediante el operador *and*. Finalmente, los datos se presentarán en un **data.frame** que recoge diversos metadatos, tales como el nombre, la descripción, el número de estrellas o la fecha de actualización.
+
+Para ilustrar estos resultados se ha optado por un **timeline scatter plot** *(gráfico de dispersión temporal)*. Como se observa en la *Figura 4* se ha representado el número de estrellas *(como indicador del número de usuarios que consideran útil o relevante el repositorio)* frente a su fecha de creación.
+
+![Fecha de creación y número de estrellas de paquetes en GitHub.](imagenes/Github_estrellas.png){width="13cm" height="17cm"}
+
+\newpage
+
+### Participación en el proceso de revisión por pares
+
+Otra de las actividades enmarcadas dentro de este proyecto fue el proceso de **revisión por pares** junto con los revisores de la editorial. Este proceso, muy común en publicaciones científicas, resulta de gran importancia, ya que posibilita la incorporación de aquellas modificaciones que se consideren relevantes, mejorando la calidad del trabajo y favoreciendo su publicación.
+
+En este contexto, se elaboró un **documento de respuesta** a los revisores, así como la corrección y adaptación de la Nota Ecoinformática de acuerdo con los aspectos mencionados en tal revisión. Finalmente, se procedió a ordenar el repositorio de GitHub desarrollado, incorporando los documentos requeridos por la normativa de la editorial.
+
+Cabe mencionar que, actualmente, la Nota Ecoinformática se encuentra en su última fase de revisión y nos encontramos a la espera de su aprobación definitiva y posterior publicación.
+
+## Observatorio de Biodiversidad de Aguas de Burgos 
+
+El proyecto de la Universidad de Burgos *"Observatorio de Biodiversidad de Aguas de Burgos (S00D06 - 052/2025)"* tiene como finalidad la monitorización de la evolución de los ecosistemas fluviales de los ríos Arlanzón, Vena y Ubierna mediante la recopilación y el análisis de información ambiental. En el marco de este proyecto, integrado en el plan de actuación de **digitalización de Aguas de Burgos**, dentro del **PRTR** y el **PERTE** de Digitalización del Ciclo del Agua, se llevaron a cabo dos actividades principales: la **configuración e instalación** de una estación bioacústica y el desarrollo de un **algoritmo para el procesamiento semiautomatizado** de registros acústicos aviares.
+
+### Contexto del proyecto
+
+El proyecto, **impulsado por Aguas de Burgos** y la **Universidad de Burgos**, tiene como objetivo principal el desarrollo de un programa integral de **indicadores de biodiversidad**, mediante la definición e implementación de un plan de seguimiento anual que establezca los procedimientos de análisis, presentación y divulgación de los resultados obtenidos. De esta forma, se busca estudiar la respuesta de los ecosistemas a las actuaciones de saneamiento y gestión del ciclo urbano del agua y  **evaluar la eficacia de las actuaciones de mitigación** desarrolladas sobre los ecosistemas fluviales, así como fomentar la **participación social** en los procesos de monitorización ambiental. 
+
+En este contexto, se plantea el desarrollo de un servicio especializado destinado al diseño, implantación y seguimiento de **indicadores basados en la biodiversidad** que permitan evaluar la correcta ejecución de las actuaciones orientadas a la protección de las masas de agua. Esta iniciativa forma parte de **+WeBur** y se integra en el plan de actuación de **digitalización de Aguas de Burgos**, enmarcado en el **Plan de Recuperación, Transformación y Resiliencia** *(PRTR)* y en el **Proyecto Estratégico para la Recuperación y Transformación Económica** *(PERTE)* de **Digitalización del Ciclo del Agua**, financiados por la Unión Europea a través del **programa NextGenerationEU**.
+
+El ámbito de actuación del proyecto abarca las masas de agua de los **ríos Arlanzón, Vena y Ubierna**, así como los ecosistemas fluviales y de ribera asociados. De esta forma, se permite analizar la evolución de estos ecosistemas junto con su respuesta frente a las actuaciones, desarrolladas en materia de saneamiento y gestión del ciclo urbano del agua, llevadas a cabo por **Aguas de Burgos** y por los usos vinculados de **ciudadanos e industrias** de los municipios abastecidos.
+
+De forma complementaria, el proyecto incorpora una vertiente de **ciencia ciudadana** que promueve la participación activa de la sociedad en la observación y registro de la biodiversidad local. Para ello, se apoya en el uso de herramientas digitales y sistemas de Inteligencia Artificial que facilitan el **almacenamiento y análisis** de información ambiental, así como la generación de conocimiento compartido acerca de estos ecosistemas.
+
+Un aspecto muy importante es la puesta a disposición pública de todos los datos obtenidos en los distintos muestreos. Es decir, toda la información recopilada se almacena en el **Portal de Biodiversidad de Aguas de Burgos**, una plataforma conectada con la red internacional de datos abiertos **Observation.org**, que permite llevar a cabo consultas en en materia de biodiversidad.
+
+Asimismo, el desarrollo del proyecto se complementa con campañas de **seguimiento ecológico y muestreo biológico** realizadas en colaboración con diferentes organismos y entidades especializadas. Este enfoque multidisciplinar permite combinar los datos obtenidos mediante **herramientas tecnológicas** con observaciones de campo y **bioindicadores ambientales**, proporcionando una visión más completa del estado de los ecosistemas fluviales y de la eficacia de las actuaciones de conservación llevadas a cabo.
+
+### Configuración de una estación bioacústica
+
+La primera actividad llevada a cabo en el contexto del proyecto estuvo orientada a la configuración y puesta en funcionamiento de una estación bioacústica para la adquisición de **registros acústicos pasivos**. También se elaboró un manual de configuración que documenta el proceso completo de instalación y configuración de los distintos softwares empleados, garantizando la **reproducibilidad del sistema** y facilitando su **incorporación en otras campañas** de monitorización.
+
+#### Acerca de la estación bioacústica
+
+Con el objetivo de proporcionar el servicio de monitorización contemplado en el proyecto, se ha desarrollado una **estación bioacústica** destinada a monitorizar la **actividad acústica aviar** del entorno mediante técnicas de registro acústico pasivo. Esta monitorización se realiza en diversos **puntos de muestreo**, definidos previamente a lo largo de los ecosistemas fluviales objeto de estudio, atendiendo a criterios tales como poca contaminación acústica y la presencia de una amplia diversidad avifaunística *(según las limitaciones de la propia biodiversidad del ecosistema)*.
+
+Una vez instalada la estación, se permite la adquisición de **registros acústicos pasivos** de manera semi-automatizada, en el sentido de que la información registrada se almacena tanto en local *(mediante el uso de tarjetas de memoria SD o micro-SD)* como en los servidores de los que se dispone en el **grupo de Investigación ADMIRABLE**, del Departamento de Ingeniería Informática de la Universidad de Burgos.
+
+El componente fundamental de esta estación es un **periférico de entrada de audio**, es decir, un dispositivo que presente un funcionamiento de micrófono, encargado de registrar las señales acústicas presentes en el entorno. Aunque actualmente existen múltiples opciones, tales como los dispositivos **“Song meter”** de Wildlife Acustics o el **“PUC”** de Birdweather, entre otros, en este proyecto se optó por emplear el dispositivo de **“AudioMoth”**, desarrollado por Open Acustic Devices. La elección de este modelo concreto se debe, fundamentalmente, a su **bajo coste**, su elevada **versatilidad** y su filosofía de **código abierto**, aspectos que facilitan tanto su adaptación a diversos escenarios como su evolución en función de las necesidades del estudio.
+
+Entre las características más importantes de AudioMoth cabe destacar su capacidad de registro acústico en **espectro completo**, es decir, capaz de registrar sonidos tanto en **frecuencia audible** como en la **ultrasónica**, lo que ofrece una gran versatilidad en el estudio de la fauna. Además, su alimentación puede ser mediante **3 pilas AA**, en caso de emplearse como sistema aislado en campañas puntuales de muestreo; o mediante una **batería externa o fuente de alimentación**, en el caso de una monitorización continua. Otro aspecto destacable de este dispositivo sería un sistema de **indicadores luminosos led** como un claro marcador del **estado de grabación** en el que se encuentra. De esta forma, una luz roja intermitente indica que está grabando, y una luz verde intermitente indica estado de reposo entre grabaciones (*entre otros múltiples códigos de color de los que se dispone)*.
+
+En la *Figura 5* se puede apreciar un esquema que refleja los distintos componentes del dispositivo AudioMoth.
+
+![Esquema de los componentes de AudioMoth.](imagenes/Esquema de AudioMoth.png){width="10cm" height="8cm"}
+
+
+#### Configuración de los componentes
+
+La estación Bioacústica es un conjunto de componentes hardware conectados entre sí y configurados de manera que operan como una única unidad funcional. Entre estos componentes se encuentra una placa **Raspberry Pi 5**, una **batería externa** y un **AudioMoth**, además de los cables requeridos para establecer sus conexiones. En la *Figura 6* se puede apreciar la estación con todos sus componentes y conexiones. En la izquierda de esta se encuentra el AudioMoth, en el centro la Raspberry Pi 5 y a la derecha la batería externa.
+
+![Esquema del montaje de la estación acústica.](imagenes/Esquema montaje.jpeg){width="12cm" height="8cm"}
+
+Como parte de este proceso de configuración, se ha elaborado el documento *("Manual de configuración de Raspberry Pi 5 con AudioMoth para su uso en BirdNET")* cuyo objetivo es recoger de forma detallada todos los procedimientos requeridos para la construcción y configuración de una estación acústica desde su etapa inicial. El documento completo puede consultarse en el **Anexo II** de esta memoria.
+
+Además de describir el montaje físico y conexiones del sistema, en dicho manual se proporcionan todos los **comandos necesarios** para la instalación del **software de BirdNET** y su inicialización, dando incluso soporte a las posibles incidencias que puedan surgir durante el proceso. En la *Figura 7* se puede apreciar la portada del manual elaborado. 
+
+![Portada del manual de configuración de una Raspeberry Pi 5 con AudioMoth.](imagenes/Portada Manual AudioMoth.png){width="6cm" height="11cm"}
+
+La elaboración de este documento presenta como finalidad garantizar la **reproducibilidad** de la estación bioacústica *(bien sea para un registro continuo o para mediciones puntuales)*, proporcionando una guía detallada que facilite su instalación en diferentes puntos de muestreo. Se busca de esta forma fomentar iniciativas de ciencia ciudadana orientadas a la **supervisión y seguimiento** ambiental. Por ello, se ha procurado que el documento presente un **elevado nivel de detalle**, al igual que un nivel de **dificultad bajo**, pudiendo ser comprendido y utilizado por personas con distinto nivel de experiencia en el ámbito.
+
+Aunque el procedimiento detallado se encuentra en el documento mencionado, conviene proporcionar algunos detalles del mismo. Primero de todo, se han empleado **dos softwares** a lo largo de este procedimieto. El primero, **Raspberry Pi Imager** es instalado en la tarjeta micro-SD que posteriormente se insertará en la Raspberry. Su función es brindar un **sistema operativo** a la misma que permita la ejecución e instalación de diversas aplicaciones. Tras una correcta instalación de este, se inserta la micro-SD en la placa, y mediante el acceso a la Raspberry Pi 5 en **terminal de comandos** del ordenador empleado, se procede a instalar la **última versión disponible de BirdNET**.
+
+Con el objetivo de establecer un registro acústico continuo que permite una monitorización constante del medio, se han modificado y adaptado tanto el firmware como sus parámetros de funcionamiento. De esta forma, empleando la aplicación gratuita **"AudioMoth Configuration App"** se establecen breves períodos de grabación seguidos de un período de reposo de una mayor duración. Este conjunto se repite de manera cíclica. También se han aplicado ajustes en relación con la **frecuencia del sonido** a capturar, la **franja horaria** en la que se efectúan las grabaciones, así como la aplicación de diversos **filtros de captación** que optimizan el volumen y calidad de los datos obtenidos.
+
+Una vez se ha completado la configuración con éxito, basta realizar una conexión USB entre la Raspberry Pi 5 y la batería externa *(fuente de alimentación o pilas en su defecto)* y otra conexión USB entre la unidad de procesamiento *(Raspberry)* y el AudioMoth. La detección de este último como periférico de captura de audio es inmediata, pudiendo comenzar de esta forma el registro de audio para su procesamiento.
+
+Cuando se desea realizar la **identificación automática de aves en tiempo real**, es suficiente con acceder a la interfaz web de BirdNET y, permaneciendo en la página de registros, el propio software comenzará la detección automática de especies en función del audio de entrada.
+
+### Monitorización algorítmica de la actividad acústica aviar
+
+Como continuación del sistema acústico de monitorización descrito anteriormente, se desarrollaron diversas actuaciones orientadas a la **monitorización algorítmica** de la actividad acústica aviar, centradas en la captura, procesamiento y análisis semiautomatizado de registros sonoros mediante un algoritmo basado en el software **BirdNET**. Esta metodología permite la obtención de datos sobre la biodiversidad del entorno de manera continua, y **no invasiva**, transformando grandes volúmenes de información acústica en información ecológica significativa.
+
+#### Contexto de la monitorización acústica
+
+La monitorización de la fauna, más concretamente en este caso, de las aves, constituye una herramienta de gran utilidad que permite establecer una **relación directa** entre sus **emisiones vocales** y el estado de conservación del ecosistema. La presencia de determinadas especies, así como algunos parámetros asociados a su actividad vocal *(abundancia, frecuencia sonora, etc)* son un claro indicador de la eficacia de las actuaciones de **mitigación** y de **protección** de las masas de agua, así como de la gestión del ciclo urbano del agua, especialmente en ecosistemas fluviales como los contemplados en este proyecto.
+
+Partiendo de esta premisa, el proyecto plantea una **estrategia de monitorización semiautomatizada** de amplias áreas naturales basada en el despliegue de **múltiples estaciones acústicas** distribuidas deliberadamente en distintos puntos del entorno. La ubicación de estas estaciones sigue una **clasificación y etiquetación por niveles**, según la proximidad de las mismas a las masas de agua. La presencia de estas etiquetas permite establecer un contraste entre las distintas zonas y evaluar la influencia del estado de los cursos fluviales en la biodiversidad local. Además, esta disposición estrátegica en diferentes niveles garantiza un **mapeo completo** del ecosistema y disminuye posibles sesgos derivados de la colocación de los dispositivos de registro de audio, evitando favorecer la grabación de determinadas especies. 
+
+Asimismo, se pretende establecer una comparativa entre las identificaciones realizadas por expertos en avifauna *(persona con conocimientos especializados en la vocalización aviar y capacidad para la identificación de especies tanto de manera visual como acústica)* y aquellas obtenidas de forma automática mediante el software de BirdNET. Esta comparativa se empleará como indicador del **rigor y precisión** de la detección automática ante diferentes factores ambientales, además de permitir determinar el grado de concordancia entre ambos sistemas. Este análisis permitirá estudiar el impacto de la **contaminación acústica** en la calidad y fiablidad de los **datos tecnológicos** obtenidos.
+
+#### Pruebas técnicas en el río Ubierna
+
+El pasado 22 de mayo de 2026, el equipo de la Universidad de Burgos, integrado por **ICCRAM University of Burgos** y **ADMIRABLE Research Group**, llevó a cabo las primeras pruebas técnicas de registro y clasificación automática de sonidos en un entorno natural. Esta primera salida de campo tenía como finalidad familiarizar al equipo tanto con la tecnología empleada como con las características acústicas y ecológicas de un entorno real. 
+
+Tales pruebas fueron desarrolladas en el ecosistema fluvial del **río Ubierna**, localizado en la provincia de Burgos. Esta experiencia permitió comprobar el **alcance de los dispositivos empleados**, validar el procedimiento de captura acústica  y comprobar la **viabilidad de la metodología** planteada hasta el momento.
+
+En las siguientes imágenes se aprecia el desarrollo de esta salida de campo. De esta forma, en la fotografía de la izquierda se puede apreciar el proceso de formación del equipo para asumir el rol de experto en identificación de aves, realizando un **reconocimiento de especies** mediante el **uso de binoculares**. En la imagen de la derecha se aprecia la instalación de una **cajas acústicas** *(no se trata de una estación acústica porque está siendo alimentada con 3 pilas AA, no emplea una Raspberry Pi 5 y se emplea únicamente para un ciclo de registro puntual)*, compuesta por el dispositivo de AudioMoth protegido por una carcasa específica para exteriores. Esta caja acústica actuaba como sistema independiente de captura de audio y fue empleada para la realización de diversas pruebas que buscaban evaluar el **sistema de instalación** y establecer los parámetros óptimos de configuración para la captación acústica.
+
+![Observación de aves mediante binoculares en el proceso de formación del rol de experto.](imagenes/Salida de campo 1.jpg){width="8cm" height="6cm"}
+![Colocación del dispositivo de AudioMoth en el medio.](imagenes/Salida de campo 2.png){width="8cm" height="6cm"}
+
+
+
+De esta forma, la grabación acústica de este dispositivo permite la obtención de información no solo en su formato acústico, sino también como **espectrograma**, siendo esta una representación visual de la **frecuencia sonora** captada **en función del tiempo**. En la *Figura 8* se aprecia uno de los espectrogramas obtenidos en la realización de estas primeras pruebas.
+
+![Espectrograma obtenido en el ecosistema del río Ubierna.](imagenes/espectrograma.png){width="14cm" height="6cm"}
+
+Cabe mencionarse además, que los datos son almacenados en un documento autogenerado en **formato csv** *(Comma-Separated Values)* que se va a almacenar en la unidad de memoria utilizada, en este caso, una tarjeta micro-SD. Este documento incluye diversas columnas de datos, entre las que destacan: fecha, hora, latitud, longitud, nombre común de la especie identificada, nombre científico de la especie identificada o el nivel de confianza de esta detección *(expresado del 0 al 1)*. Esta información almacenada será la **base de la automatización del registro** en el algoritmo desarrollado.
+
+
+
+Finalmente, como resultado del análisis de múltiples áreas de este ecosistema, se generó un **heatmap de especies** *(Figura 9)* para cada una de las zonas de registro. El heatmap es un gran resumen visual del mapeo del área, ya que representa el **número de observaciones** de cada una de las **especies registradas** en las diversas **zonas de muestreo**.
+
+![Heatmap de especies aviares en la salida de campo.](imagenes/heatmap_especies_zonas.png){width="13cm" height="10cm"}
+
+
+
+#### Algoritmo planteado
+
+El algoritmo planteado busca dar respuesta al problema derivado del **gran volumen de datos** que genera una sola estación acústica en breves períodos temporales. La acumulación de registros, multiplicada por las diversas estaciones acústicas necesarias para monitorizar un ecosistema de manera adecuada, hacen que sea **inviable un seguimiento, gestión y procesamiento manual** de la información obtenida.
+
+Aunque cada estación acústica genera de manera individual un archivo en formato *csv* con sus correspondientes registros, resulta de interés agrupar la información procedente de todas las estaciones presentes en un mismo ecosistema para **unificar, estructurar y centralizar el registro**. Por ello, se ha considerado la **implementación de una base de datos relacional** como la solución más adecuada para un almacenamiento y una gestión eficientes. 
+
+Para automatizar la construcción de la base de datos partiendo de estos archivos individuales, se ha empleado la programación en el **lenguaje R** y el motor de base de datos relacionales **SQLite**. Este modelo de datos está compuesto de una tabla de **estaciones acústicas** y otra de **registros**. Aquella correspondiente a las estaciones almacena información que permite la identificación de cada dispositivo, incluyendo una **etiqueta única** *(asignada según su posición y distancia a la masa de agua, como se ha explicado anteriormente)* que actúa como **clave primaria**, y las coordenadas geográficas, entre otros atributos importantes. Por otra parte, respecto a la tabla de registros, se almacenan en esta las **detecciones** llevadas a cabo por el software de BirdNET y se relaciona con la tabla de estaciones acústicas mediante una **foreign key *(clave foránea)* ** correspondiente a la etiqueta identificativa.
+
+Esta estructura permite no solo almacenar de manera conjunta los registros propios de un mismo ecosistema, sino que también facilita la **consulta, el análisis y la integridad** de los datos.
+
+Para garantizar el correcto funcionamiento de esta base de datos, resulta imprescindible realizar una **correcta configuración inicial** de las estaciones acústicas. En concreto, debe garantizarse que cada estación disponga de un **identificador** y que este sea **único** *(no pueden existir duplicados ya que debe permitirnos identificar la estación acústica de manera unívoca)*  y que **su posicionamiento** corresponda con las coordenadas geográficas definidas para esa etiqueta. De lo contrario, no va a existir concordancia en las relaciones establecidas entre las tablas, produciéndose errores en la gestión de su información contenida.
+
+Por otra parte, dado que se pretende poner a disposición pública los datos obtenidos a través de **Observation.org**, se requiere la adaptación de los registros generados al formato de importación específico de esta plataforma. Para ello, se va a descargar la **plantilla en formato *xlsx* ** ofrecida por esta misma web y se va a emplear esta como modelo para transformar los datos almacenados en SQLite.
+
+La publicación de estos registros en **Observation.org**, pone a **disposición de la ciencia pública** a nivel internacional la información obtenida, favoreciendo la **intervención ciudadana** en la preservación y cuidado del medio ambiente, y promoviendo la **investigación colaborativa**.
+
+Para la obtención de los registros, el algoritmo ejecutará el software de BirdNET de manera individual sobre el audio capturado en cada estación acústica. Este proceso proporciona los correspondientes **archivos *csv*** con las detecciones aviares realizadas. Adicionalmente, se ofrece al usuario la posibilidad de recibir a través del correo electrónico registrado en la configuración de la estación un fichero en **formato JSON** *(JavaScript Object Notation, un formato de texto ligero diseñado para el almacenamiento y el intercambio estructurado de datos)*.
+
+A continuación, una vez están incorporados todos los registros en la base de datos, se procede a la generación de un archivo *xlsx* de todo el ecosistema siguiendo el formato de la plantilla descargada desde **Observation.org**. En este procedimiento, el algoritmo recupera automáticamente la información asociada a cada estación acústica, incorporado a cada registro que efectúe esa estación los parámetros de **longitud y latitud** correspondientes a su ubicación. También se mantendrá constante en el resultado final el **identificador alfanumérico** asignado a cada estación, permitiendo distinguir de qué zona proceden cada una de las entradas en el documento final. 
+
+Mientras que la mayoría de las columnas, tales como el nombre común o científico de la especie, se completarán partiendo de los datos registrados en el *csv* generado, algunos datos no guardan correspondencia. Por ello, los datos almacenados en los ficheros proporcionados por BirdNET que no son requeridos según la plantilla de **Observation.org** serán omitidos en este procedimiento. Por otra parte, aquellas columnas de datos de los que no se dispone información en el registro para completar, o no sean relevantes en este caso, tal y como el parámetro de *obscurity*,para especies protegidas, o *estadío* , se dejarán en blanco.
+
+Es importante destacar que algunos **parámetros son propios de la metodología** y, por tanto, sus atributos se van a rellenar automáticamente para cada una de las entradas, manteniendo estos datos constantes. Por ejemplo, el campo de **accuracy** va a permanecer siempre a **10**, debido al rango de detección de AudioMoth; el campo de **actividad** será completado con **"cantando"** y el campo correspondiente a **método** se completará con **"oído"**, ya que el registro es únicamente acústico; entre otros.
+
+De manera paralela al procesamiento automático de la información, el experto *(rol definido con anterioridad)* puede llevar a cabo su propio **registro manual de observaciones**, siguiendo la misma estructura de datos que la proporcionada por el algoritmo. Este conjunto de observaciones constituirá el **gold standard** de validación, al considerarse la **representación más fiable** del medio.
+
+Finalmente, una vez obtenidos ambos conjuntos de datos, se puede establecer una **comparativa** entre los registros obtenidos de manera automática por el **software de BirdNET** y aquellos obtenidos mediante la **observación humana**. Esta comparación permitirá evaluar el rendimiento y la precisión de las herramientas empleadas, mediante la generación de múltiples parámetros estadísticos. De este modo, se medirá la capacidad del sistema para **identificar correctamente las especies presentes** y determinar el **grado de fiabilidad** de la metodología propuesta en **condiciones reales**.
+
+En la *Figura 10* se aprecia un esquema que representa el flujo del algoritmo planteando para llevar a cabo este registro semi-automatizado y en el repositorio vinculado en el **Anexo I** en el apartado titulado **Workflow Bioacústico** se encuentra la primera versión del *script*.
+
+![Flujo del algoritmo de identificación acústica.](imagenes/Flujo del algoritmo de monitorización.png){width="14cm" height="17cm"}
+
+\newpage
+
+# Conclusiones
+
+A continuación se exponen las conclusiones acerca de los diversos proyectos de investigación, así como una reflexión personal sobre el aprendizaje y la experiencia adquiridos durante la realización de los mismos.
+
+Primero de todo, en relación con la **"Nota Ecoinformática"**, se han alcanzado satisfactoriamente los objetivos planteados en la fase de inicio. Entre los resultados obtenidos, destaca la reestructuración del código inicial en diversas **funciones con un motor de búsqueda común**, mejorando no solo la organización, sino también **la escalabilidad** de las búsquedas. Por otra parte, se ha dado respuesta a los revisores, atendiendo a sus sugerencias y observaciones durante el período de revisión por pares.
+
+El desarrollo de este primer proyecto ha contribuido a afianzar y fortalecer mis competencias en **programación** y **reestructuración de código**, manteniendo siempre el objetivo de un *script* reproducible, fiable y escalable. Además, me ha permitido adquirir una visión realista del **proceso de publicación científica**, abarcando las diversas fases desde la finalización de un trabajo de investigación hasta su revisión y posterior publicación.
+
+En segundo lugar, respecto a la **"Configuración de una estación acústica"** se puede concluir lo siguiente. Se ha alcanzado con éxito el ensamblaje y puesta en funcionamiento de una estación **operativa y autónoma**, estableciendo comunicación entre la **Raspberry Pi 5** y el periférico de **AudioMoth**. La integración de ambos componentes en una unidad funcional ha permitido la ejecución del **software de BirdNET**, posibilitando la detección e identificación de aves con precisión a partir de registros acústicos. 
+
+En este contexto, esta actividad me ha permitido adquirir experiencia práctica en la **integración de componentes hardware y software**, así como en la creación de un manual técnico orientado a la reproductibilidad del proyecto por parte de otros usuarios, buscando de esta forma un **alto nivel de detalle** y un **procedimiento simplificado**.
+
+En relación con la **Monitorización algorítmica de la actividad acústica aviar**, se puede concluir que, aunque el proyecto abordado aún se encuentra en desarrollo y tiene una planificación temporal para los próximos años, las actividades realizadas en este marco han contribuido de **manera significativa** en su avance. El planteamiento del algoritmo, así como las pruebas experimentales llevadas a cabo en el río Ubierna han constituido la base sobre la que se desarrollará el proyecto, permitiendo conocer no solo las **limitaciones y artefactos** presentes en los equipos y metodologías empleadas, sino también obtener **resultados medibles** que han permitido realizar un ajuste óptimo de los parámetros de configuración.
+
+El desarrollo de este proyecto me ha permitido adquirir la **experiencia práctica** en las etapas iniciales de un proyecto, participando en los procesos de generación de la idea y validación de esta de manera experimental. Asimismo, ha contribuido al desarrollo de las **capacidades de abstracción**, **resolución** de problemas y **adaptación** a requisitos cambiantes, competencias fundamentales en la investigación científica.
+
+## Conclusiones del aprendizaje
+
+La integración en el grupo de investigación **Best AI** ha supuesto una de las **experiencias más enriquecedoras** de mi etapa universitaria, y ha marcado un antes y un después en mi **percepción** del concepto de **investigación**. Si bien contaba con una aproximación previa gracias a la realización del **Bachillerato de Investigación y Excelencia ** *(BIE)*, esta experiencia me ha permitido consolidar y profundizar dicha visión al involucrarme en un entorno de mayor exigencia, participando en proyectos reales de **alto impacto**, tanto a nivel científico como social.
+
+Desde una perspectiva académica, esta estancia ha constituido una **excelente oportunidad** para poner en práctica los conocimientos adquiridos durante el grado, comprobar su aplicación en contextos reales y consolidar el aprendizaje adquirido hasta la fecha. Resulta **especialmente motivador** ver cómo **conceptos teóricos** estudiados durante mi formación universitaria hasta la fecha tienen una **aplicación real en la resolución de problemas** concretos del ámbito. Esto ha reforzado mi compromiso con el **esfuerzo y la formación continua**, al evidenciar que la **calidad de los conocimientos** adquiridos y el interés personal en profundizar en ellos son **factores determinantes** para el desarrollo de un **perfil profesional competente**.
+
+Otro aprendizaje de gran valor ha sido comprender la necesidad de **integrar las diversas competencias adquiridas** a lo largo de mi formación. En la investigación, los **problemas presentan un carácter multidisciplinar**, no estando delimitados por asignaturas o materias concretas. Es por ello que requieren **combinar** conocimientos procedentes de diferentes ámbitos y aplicarlos como un conjunto para alcanzar **soluciones innovadoras**. Esta visión global me ha permitido **dar significado e importancia** a todas y cada una de las asignaturas cursadas, entendiendo su **implicación en la práctica profesional**.
+
+Sin duda, uno de los aspectos más valiosos de esta experiencia ha sido la oportunidad de integrarme en un **grupo de investigación consolidado**. Desde el primer momento, me he sentido completamente **integrada y acogida** como un miembro más del grupo. Me han sido proporcionados **todos los recursos** necesarios para el desarrollo de mi trabajo, y me han invitado a la participación en reuniones, intercambios de ideas, salidas de campo y otras tareas vinculadas a sus proyectos en desarrollo. Todo ello me ha permitido conocer el **funcionamiento de un entorno investigador**, adoptando una **visión colaborativa y comunicativa** como pilares fundamentales en la **generación del conocimiento**. 
+
+Esta experiencia también me ha brindado una visión mucho más humana de la investigación. He comprobado de primera mano que, pese a que las **herramientas y procesos** son aspectos importantes, el verdadero valor de un proyecto reside en el **talento humano**. El resultado de un proyecto se mide por el **esfuerzo colectivo** en servicio de un objetivo común.
+
+Otro aspecto especialmente destacable, ha sido la oportunidad de conocer a **investigadores referentes** en el marco de la Universidad de Burgos y con un reconocido prestigio a nivel nacional. Estos profesionales, en especial, **Antonio J. Canepa Oneto** se han tomado el tiempo de explicarme con detalle sus **líneas de investigación** y me han mostrado los **avances** en los proyectos que actualmente están desarrollando. Estas charlas fueron para mí **sesiones inspiracionales** de calidad y estos profesionales se han convertido en **referentes para mi desarrollo académico y profesional** a corto plazo.
+
+Desde una perspectiva personal, esta experiencia también ha supuesto un **importante reto**. Compatibilizar las responsabilidades derivadas de la actividad investigadora con las exigencias propias del grado ha requerido una **gestión eficiente** del tiempo, una **planificación rigurosa** de las tareas y una elevada **capacidad de organización**. Todo ello con el objetivo de mantener un **alto nivel de implicación y exigencia** tanto en el ámbito investigador como en el académico. Este esfuerzo me ha permitido fortalecer aún más mi **autonomía, disciplina y capacidad de autogestión**, competencias imprescindibles para afrontar con éxito futuros desafíos tanto académicos como profesionales.
+
+Además, esta estancia me ha ayudado a **reforzar mi carácter** como investigadora. Me ha permitido **ganar confianza** en mis capacidades, **asumir responsabilidades** y enfrentarme a **situaciones nuevas**, comprendiendo que el **fracaso y los errores** son una forma de aprendizaje inevitable en la investigación. Gracias a esta experiencia he confirmado mi interés por la investigación y mi deseo de seguir formándome en este ámbito.
+
+Por otra parte, haber tenido la oportunidad de acercarme al **ejercicio profesional** de la **Ingeniería de la Salud** ha supuesto una experiencia significativa. A lo largo del grado, aunque llevamos a cabo diversas prácticas en el laboratorio, predominan los conceptos teóricos. No obstante, participar en **proyectos reales** me ha permitido visualizar la **aplicación práctica** del grado y comprender el **impacto de la investigación** como **mejora de la calidad de vida** de las personas.
+
+Por todo ello, considero que la beca de la *"Escuela de Investigadores, 2026"* ha cumplido plenamente su objetivo de **formación del estudiantado** en la investigación, y ha sido una **experiencia enriquecedora** tanto a **nivel personal** como **profesional**. Además, ha brindado salida a aquellos alumnos, como en mi caso, que ya habíamos apostado por la investigación en bachillerato mediante la modalidad de BIE *(Bachillerato de investigación y excelencia)* y que buscamos formarnos en este ámbito, teniendo en mente nuestro futuro profesional en la disciplina. Más allá de los conocimientos técnicos adquiridos, esta beca me ha proporcionado una **visión más madura** de la investigación, de los **desafíos** que esta implica, de su **impacto en la sociedad** y de la **responsabilidad** que supone generar nuevo conocimiento. Sin duda, ha consolidado mi interés por continuar formándome y explorando nuevas oportunidades vinculadas a la investigación y la innovación en el ámbito de la **Ingeniería de la Salud**.
+
+# Agradecimientos
+
+En primer lugar, deseo expresar mi más sincero agradecimiento a la **Universidad de Burgos** y al **Banco Santander** por la oportunidad brindada a través de la convocatoria *“Creación de la Escuela de Investigadores de la Universidad de Burgos, año 2026"*, así como por el apoyo institucional y la financiación concedida, elementos fundamentales para el desarrollo de esta experiencia investigadora.
+
+Asimismo, quisiera agradecer al grupo de investigación **BEST-AI** por su cálida acogida y por facilitar mi integración en un entorno de trabajo **profesional**, altamente **cualificado**, **colaborativo** y **enriquecedor**. Poder participar de forma activa en las líneas de investigación desarrolladas por un equipo tan comprometido ha supuesto una experiencia formativa muy valiosa, contribuyendo significativamente a mi desarrollo académico y profesional, así como a mi **crecimiento personal**.
+
+Merece una especial mención mi agradecimiento a **Antonio J. Canepa** por su constante **apoyo, supervisión y orientación** a lo largo de estos meses. Su disponibilidad para atender consultas, la calidad de sus correcciones y observaciones y, en especial, la confianza depositada en mí al permitirme colaborar en diversos proyectos, han sido determinantes para el máximo aprovechamiento de esta etapa formativa. Agradezco especialmente su **dedicación, cercanía y permanente disposición** para facilitar el desarrollo de mi trabajo, cualidades que han sido fundamentales para el excelente aprovechamiento de esta beca.
+
+\newpage
+
+# Anexos
+
+## Anexo I
+
+Se proporciona el enlace de acceso a un repositorio de GitHub que recopila los documentos realizados en el marco de los diversos proyectos mencionados a lo largo de esta memoria.
+
+**Enlace de acceso:** https://github.com/cfr1012/Memoria-de-la-Escuela-de-Investigadores-a-o-2026
+
+## Anexo II
+
+```{=latex}
+\includepdf[pages=-,fitpaper=true]{Manual_de_configuración_de_la_estación_acústica.pdf}
+```
