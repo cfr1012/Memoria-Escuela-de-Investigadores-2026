@@ -4,7 +4,7 @@
 Este repositorio recopila los diversos proyectos, documentos y materiales elaborados durante mi participación en la *Escuela de Investigadores 2026*, desarrollada en colaboración con el grupo de investigación **BEST-AI** de la Universidad de Burgos entre los meses de marzo y junio de 2026.
 
 ## Beca Escuela de Investigadores
-La *Beca de la Escuela de Investigadores de la Universidad de Burgos* es una iniciativa cofinanciada por el **Banco Santander** e impulsada por la **Universidad de Burgos**. Su finalidad es acercar a los estudiantes de grado a la actividad investigadora mediante su **integración activa** en diversos Grupos de Investigación Reconocidos *(GIR)*, promoviendo así la adquisición de competencias científicas y técnicas propias de este ámbito. La estancia en un entorno real de investigación fortalece la formación académica de los estudiantes,  promoviendo el desarrollo de una temprana vocación científica y la consolidación de una comunidad académica orientada a la generación de conocimiento, la innovación y la transferencia.
+La *Beca de la Escuela de Investigadores de la Universidad de Burgos* es una iniciativa cofinanciada por el **Banco Santander** e impulsada por la **Universidad de Burgos**. Su finalidad es acercar a los estudiantes de grado a la actividad investigadora mediante su **integración activa** en diversos Grupos de Investigación Reconocidos *(GIR)*, promoviendo así la adquisición de competencias científicas y técnicas propias de este ámbito. La estancia en un entorno real de investigación fortalece la formación académica de los estudiantes,  promoviendo el desarrollo de una temprana vocación científica y fomentando la adquisición de competencias relacionadas con la generación de conocimiento, la innovación y la transferencia tecnológica.
 
 ## Grupo de investigación BEST-AI
 <img align="left" width="250" alt="Logotipo GIR" src="https://github.com/user-attachments/assets/ebf6538e-7668-42b6-a304-e9717f00c7a5" />
@@ -49,7 +49,7 @@ El presente repositorio se estructura en los siguientes apartados:
   - `README.md`
   - Descripción general del proyecto y enlace al repositorio correspondiente.
 - Workflow Bioacústico
-  - `README.md`
+  - `Algoritmo.R`
 
 ## Agradecimientos
 En primer lugar, expresar mi agradecimiento a la **Universidad de Burgos** y al **Banco Santander** por la oportunidad brindada a través de la convocatoria *“Creación de la Escuela de Investigadores de la Universidad de Burgos, año 2026"*, así como por el apoyo y la financiación recibidos durante el desarrollo de la misma.
