@@ -15,38 +15,48 @@ Su actividad investigadora se centra en el desarrollo y aplicación de técnicas
 
 Su marcado **carácter multidisciplinar** favorece la colaboración entre investigadores de diferentes áreas de conocimiento, así como la participación en proyectos internacionales junto a instituciones como **Bangor University** (Reino Unido), **Texas A&M University System** (Estados Unidos) o **Tokyo Institute of Technology** (Japón).
 
+
+>[!IMPORTANT]
 Actualmente, el grupo cuenta con una destacada producción científica que incluye más de **60 publicaciones científicas** y más de **40 contribuciones a congresos** de temáticas multidisciplinares.
 
 <br clear="left"/>
 
 ## Contenido del repositorio
 El presente repositorio se estructura en los siguientes apartados:
-- Informe final
+- **Informe final**
   - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.Rmd`
   - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.pdf`
-- Manual de AudioMoth
+- **Manual de AudioMoth**
   - `Manual de configuración de la estación acústica.pdf`
-- Nota Ecoinformática
-  - `README.md` (descripción general del proyecto y enlace al repositorio correspondiente)
-- Workflow Bioacústico
+- **Nota Ecoinformática**
+  - `README.md` *(descripción general del proyecto y enlace al repositorio correspondiente)*
+- **Workflow Bioacústico**
   - `Algoritmo.R`
 
 ## Proyectos de investigación
 Las actividades desarrolladas en el marco de esta convocatoria se han estructurado en torno a **dos proyectos de investigación diferenciados**: la elaboración y publicación de una **Nota Ecoinformática** en una revista indexada y el **Observatorio de Biodiversidad de Aguas de Burgos**. A continuación, se presenta una breve descripción de cada uno de ellos.
 
 ### Nota Ecoinformática
-<img align="left" width="450" height="250" alt="CRAN_Publicados_Descargados" src="https://github.com/user-attachments/assets/8d45f150-84c6-4672-9560-4a91453ef432" />
 
-En el marco de este proyecto se llevaron a cabo diversas actividades orientadas a la publicación de un artículo, bajo el título de *"Revisión sistemática de repositorios de paquetes para el lenguaje R (CRAN, GitHub, Bioconductor)"*, en la **revista científica indexada "Ecosistemas"**. Estas actividades abarcaron desde el desarrollo de código y su modulación en funciones hasta el proceso de revisión por pares y la adaptación del manuscrito a las directrices de la editorial.
+<img align="left" width="300" height="300" alt="Bioconductor_Dependencias" src="https://github.com/user-attachments/assets/fda69636-749b-41e7-9664-0e1ddc73d073" />
+
+
+En el marco de este proyecto se llevaron a cabo diversas actividades orientadas a la publicación de un artículo, bajo el título de *"Revisión sistemática de repositorios de paquetes para el lenguaje R (CRAN, GitHub, Bioconductor)"*, en la **revista científica indexada "Ecosistemas"**. Estas actividades abarcaron desde el desarrollo de código y su implementación en funciones hasta el proceso de revisión por pares y la adaptación del manuscrito a las directrices editoriales.
+
+El lenguaje de programación R dispone de un amplio **ecosistema de paquetes** que amplían significativamente sus capacidades y facilitan el desarrollo de análisis especializados en múltiples ámbitos científicos. Es por ello que, dada la importancia de estos recursos, resulta de interés disponer de herramientas que permitan realizar **búsquedas sistemáticas** en los principales repositorios de este ecosistema. En este contexto, se han implementado **funciones de consulta** que permiten localizar y filtrar paquetes a partir de consultas definidas por el usuario.
 
 <br clear="left"/>
 
 ### Observatorio de biodiversidad de Aguas de Burgos
-<img align="left" width="450" height="480" alt="Instalación de la caja acústica en ecosistema fluvial" src="https://github.com/user-attachments/assets/03431d3a-cc92-45e3-89f7-71febf4f54ec" />
+<img align="left" width="300" height="300" alt="Instalación de la caja acústica en ecosistema fluvial" src="https://github.com/user-attachments/assets/03431d3a-cc92-45e3-89f7-71febf4f54ec" />
 
-El proyecto, focalizado en la biodiversidad de Aguas de Burgos, tiene como objetivo principal el desarrollo de un programa integral de **indicadores de biodiversidad**, definiendo e implementando un plan de seguimiento anual que establece los procedimientos de análisis, presentación y divulgación de los resultados obtenidos. Se busca de esta forma **evaluar la eficacia de las actuaciones de mitigación**, así como una mejora en la **participación social** en la monitorización ambiental.
+El proyecto de la Universidad de Burgos *"Observatorio de Biodiversidad de Aguas de Burgos (S00D06 - 052/2025)"* tiene como finalidad la monitorización de la evolución de los ecosistemas fluviales de los **ríos Arlanzón, Vena y Ubierna** mediante la recopilación y el análisis de información ambiental. Para ello, contempla el desarrollo de un programa integral de **indicadores de biodiversidad** y de un plan de seguimiento anual que establece los procedimientos de análisis, presentación y divulgación de los resultados obtenidos. 
 
-En este contexto, se desarrollará un servicio especializado destinado al diseño, implantación y seguimiento de **indicadores basados en la biodiversidad** que permitan evaluar la correcta ejecución de las actuaciones orientadas a la protección de las masas de agua. En concreto, el servicio abarcará las masas de agua de los **ríos Arlanzón y Vena**, así como los ecosistemas fluviales y de ribera asociados, que resultan afectados por la gestión del ciclo urbano del agua realizada por **Aguas de Burgos** y por los usos vinculados de **ciudadanos e industrias** de los municipios servidos.
+En este contexto, se desarrolla una monitorizoción bioacústica aviar de estos ecosistema de manera semiautomatizada mediante la instalación de múltiples estaciones acústicas basadas en dispositivos **AudioMoth**. Estas estaciones integran el software de BirdNET junto con un algoritmo de **WorkFlow bioacústico** específicamente diseñado para este proyecto, permitiendo la adquisición, clasificación y almacenamiento de registros en una base de datos autogenerada. 
+
+>[!IMPORTANT]
+La información obtenida se transforma posteriormente en indicadores ecológicos que facilitan la evaluación del estado de los ecosistemas fluviales y del impacto de las actuaciones de **gestión del ciclo urbano del agua** llevada a cabo por **Aguas de Burgos**. De este modo, el proyecto contribuye a evaluar la eficacia de las medidas de **mitigación y preservación de las masas de agua** implementadas y a fomentar la **participación social** en las actividades de monitorización ambiental.
+
 
 <br clear="left"/>
 
