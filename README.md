@@ -9,23 +9,35 @@ La *Beca de la Escuela de Investigadores de la Universidad de Burgos* es una ini
 ## Grupo de investigación BEST-AI
 <img align="left" width="250" alt="Logotipo GIR" src="https://github.com/user-attachments/assets/ebf6538e-7668-42b6-a304-e9717f00c7a5" />
 
-**BEST-AI** *(Biología, Educación y Salud con Tecnologías Avanzadas Informáticas)* es un Grupo de Investigación Reconocido *(GIR)* de la Universidad de Burgos, constituido en **2019** y adscrito principalmente a los departamentos de **Ingeniería Informática** e **Ingeniería Civil**.
+**BEST-AI** *(Biología, Educación y Salud con Tecnologías Avanzadas Informáticas)* es un Grupo de Investigación Reconocido *(GIR)* de la Universidad de Burgos, constituido en el año **2019** y adscrito, principalmente, a los departamentos de **Ingeniería Informática** e **Ingeniería Civil**.
 
 Su actividad investigadora se centra en el desarrollo y aplicación de técnicas de **Inteligencia Artificial (IA)**, aprendizaje automático y minería de datos para la resolución de problemas en ámbitos como la salud, la biología, el medioambiente y la educación.
 
 Su marcado **carácter multidisciplinar** favorece la colaboración entre investigadores de diferentes áreas de conocimiento, así como la participación en proyectos internacionales junto a instituciones como **Bangor University** (Reino Unido), **Texas A&M University System** (Estados Unidos) o **Tokyo Institute of Technology** (Japón).
 
-Actualmente, el grupo cuenta con una destacada producción científica que incluye más de **60 publicaciones científicas** y más de **40 contribuciones a congresos nacionales e internacionales**.
+Actualmente, el grupo cuenta con una destacada producción científica que incluye más de **60 publicaciones científicas** y más de **40 contribuciones a congresos** de temáticas multidisciplinares.
 
 <br clear="left"/>
 
+## Contenido del repositorio
+El presente repositorio se estructura en los siguientes apartados:
+- Informe final
+  - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.Rmd`
+  - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.pdf`
+- Manual de AudioMoth
+  - `Manual de configuración de la estación acústica.pdf`
+- Nota Ecoinformática
+  - `README.md` (descripción general del proyecto y enlace al repositorio correspondiente)
+- Workflow Bioacústico
+  - `Algoritmo.R`
+
 ## Proyectos de investigación
-En el marco de esta convocatoria se han llevado a cabo múltiples actividades que se engloban en **dos proyectos distintos**. El primero de ellos es la publicación de una **Nota Ecoinformática** en una revista indexada, y el segundo de ellos es el **Observatorio de Biodiversidad de aguas de Burgos**.
+Las actividades desarrolladas en el marco de esta convocatoria se han estructurado en torno a **dos proyectos de investigación diferenciados**: la elaboración y publicación de una **Nota Ecoinformática** en una revista indexada y el **Observatorio de Biodiversidad de Aguas de Burgos**. A continuación, se presenta una breve descripción de cada uno de ellos.
 
 ### Nota Ecoinformática
 <img align="left" width="450" height="250" alt="CRAN_Publicados_Descargados" src="https://github.com/user-attachments/assets/8d45f150-84c6-4672-9560-4a91453ef432" />
 
-En el marco de este proyecto se llevaron a cabo diversas actividades orientadas a la participación en la publicación de un artículo, bajo el título de *"Revisión sistemática de repositorios de paquetes para el lenguaje R (CRAN, GitHub, Bioconductor)"*, en la **revista científica indexada "Ecosistemas"**. Estas actividades englobaron desde el desarrollo de código hasta el proceso de revisión por pares y la adaptación a la normativa de la editorial.
+En el marco de este proyecto se llevaron a cabo diversas actividades orientadas a la publicación de un artículo, bajo el título de *"Revisión sistemática de repositorios de paquetes para el lenguaje R (CRAN, GitHub, Bioconductor)"*, en la **revista científica indexada "Ecosistemas"**. Estas actividades abarcaron desde el desarrollo de código y su modulación en funciones hasta el proceso de revisión por pares y la adaptación del manuscrito a las directrices de la editorial.
 
 <br clear="left"/>
 
@@ -38,22 +50,9 @@ En este contexto, se desarrollará un servicio especializado destinado al diseñ
 
 <br clear="left"/>
 
-## Contenido del repositorio
-El presente repositorio se estructura en los siguientes apartados:
-- Informe final
-  - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.Rmd`
-  - `Memoria Escuela de Investigadores_Claudia Fernández Ruiz.pdf`
-- Manual de AudioMoth
-  - `Manual de configuración de la estación acústica.pdf`
-- Nota Ecoinformática
-  - `README.md`
-  - Descripción general del proyecto y enlace al repositorio correspondiente.
-- Workflow Bioacústico
-  - `Algoritmo.R`
-
 ## Agradecimientos
-En primer lugar, expresar mi agradecimiento a la **Universidad de Burgos** y al **Banco Santander** por la oportunidad brindada a través de la convocatoria *“Creación de la Escuela de Investigadores de la Universidad de Burgos, año 2026"*, así como por el apoyo y la financiación recibidos durante el desarrollo de la misma.
+En primer lugar, deseo expresar mi más sincero agradecimiento a la **Universidad de Burgos** y al **Banco Santander** por la oportunidad brindada a través de la convocatoria *“Creación de la Escuela de Investigadores de la Universidad de Burgos, año 2026"*, así como por el apoyo institucional y la financiación concedida, elementos fundamentales para el desarrollo de esta experiencia investigadora.
 
-Asimismo, me gustaría agradecer al grupo de investigación **BEST-AI** por su acogida e integración en el mismo, así como por brindarme la oportunidad de formar parte de un entorno de trabajo profesional y enriquecedor. Poder formar parte del plan de investigación de un equipo tan comprometido ha supuesto un aprendizaje muy valioso, no solo a nivel académico y profesional, sino también personal.
+Asimismo, quisiera agradecer al grupo de investigación **BEST-AI** por su cálida acogida y por facilitar mi integración en un entorno de trabajo **profesional**, altamente **cualificado**, **colaborativo** y **enriquecedor**. Poder participar de forma activa en las líneas de investigación desarrolladas por un equipo tan comprometido ha supuesto una experiencia formativa muy valiosa, contribuyendo significativamente a mi desarrollo académico y profesional, así como a mi **crecimiento personal**.
 
-Tampoco puede faltar mi más profundo agradecimiento a **Antonio J. Canepa**, por su apoyo, supervisión y orientación a lo largo de estos meses. Su disposición para resolver dudas, sus correcciones y la confianza depositada en mí al permitirme colaborar en múltiples proyectos, han sido esenciales en esta experiencia. Gracias por su dedicación, y en especial, cercanía y facilidades proporcionadas estos meses.
+Merece una especial mención mi agradecimiento a **Antonio J. Canepa** por su constante **apoyo, supervisión y orientación** a lo largo de estos meses. Su disponibilidad para atender consultas, la calidad de sus correcciones y observaciones y, en especial, la confianza depositada en mí al permitirme colaborar en diversos proyectos, han sido determinantes para el máximo aprovechamiento de esta etapa formativa. Agradezco especialmente su **dedicación, cercanía y permanente disposición** para facilitar el desarrollo de mi trabajo, cualidades que han sido fundamentales para el excelente aprovechamiento de esta beca.
