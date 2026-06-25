@@ -2,9 +2,9 @@
 [Enlace al repositorio del proyecto](https://github.com/ajcanepa/NotaEcoinformatica_Revision_Repositorios)
 
 ## Objetivo
-La **Nota Ecoinformática** presenta como objetivo dar soporte a las búsquedas sistemáticas de paquetes en el entorno de R, en concreto, en los repositorios **CRAN, Bioconductor y GitHub**. De esta forma, se busca el desarrollo de **tres funciones** que unifiquen el patrón de búsqueda y permitan filtrar el listado de paquetes según la **query introducida**. El formato de esta query debe ser aceptado tanto en la sintaxis propia del repositorio como con operadores booleanos, persiguiendo el empleo de los distintos repositorios de **manera transparente a las peculiaridades internas** de cada uno.
+La **Nota Ecoinformática** presenta como objetivo dar soporte a las búsquedas sistemáticas de paquetes en el entorno de R, en concreto, en los repositorios **CRAN, Bioconductor y GitHub**. De esta forma, se busca el desarrollo de **tres funciones** que unifiquen el patrón de búsqueda y permitan filtrar el listado de paquetes según la **query introducida**. El formato de esta query debe ser aceptado tanto en la sintaxis propia del repositorio como mediante operadores booleanos, permitiendo el empleo de los distintos repositorios de **manera transparente a las peculiaridades internas** de cada uno.
 
-El filtrado de paquetes permite llevar a cabo un análisis gráfico de los resultados, como se muestra a continuación.
+El filtrado de paquetes permite llevar a cabo un análisis gráfico de los resultados, como se muestra en las siguientes figuras.
 
 - **CRAN**
 <div align="center">
