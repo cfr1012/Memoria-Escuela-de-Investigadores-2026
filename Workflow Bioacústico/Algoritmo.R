@@ -28,7 +28,7 @@ crear_base_de_datos_de_registros <- function(
   }
   
   if (length(archivos_encontrados) == 0) {
-    stop("Esta carpeta introducida no dispone de ficheros con extensión .csv para generar la base de datos. Por favor, inserte una carpeta válida")
+    stop("No se dispone de ficheros con extensión .csv para generar la base de datos. Por favor, inserte un archivo o una carpeta válida")
   }
   
   # Establecemos conexión entre el entorno R y SQLite
