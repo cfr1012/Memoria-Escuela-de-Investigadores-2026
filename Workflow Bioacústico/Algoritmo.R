@@ -9,7 +9,7 @@ library(openxlsx) #para crear, modificar y guardar archivos .xlsx
 crear_base_de_datos_de_registros <- function(
     archivos = NULL, #se pueden listar los diversos archivos csv
     carpeta = NULL, #se puede introducir directamente la carpeta donde están todos los ficheros
-    archivo_sqlite = "BaseDatos_RegistrosBirdNET.sqlite" #nombre de la base de datos generada
+    archivo_sqlite = "BaseDatos_RegistrosBirdNET.sqlite" #si ya disponemos de una base de datos, se pasa esta como parámetro, en caso contrario, se crea una
 ) {
   
   # Obtener los archivos csv a procesar
