@@ -8,22 +8,25 @@ El filtrado de paquetes permite llevar a cabo un análisis gráfico de los resul
 
 - **CRAN**
 <div align="center">
-	<img width="600" height="330" alt="CRAN_Publicados_Descargados" src="https://github.com/user-attachments/assets/044081ec-e893-4e2a-92e5-f66051d67921" />
+	<img width="600" height="330" alt="CRAN_Publicados_Descargados" src="https://github.com/user-attachments/assets/a904e24a-cd4b-49c4-b4c4-6c7b4dffd9aa" />
   <p><em>Gráficos de barras de los paquetes creados y descargados.</em></p>
 </div>
+
 
 ______________________________________________________
 
 - **Bioconductor**
 <div align="center">
-	<img width="400" height="500" alt="Bioconductor_Dependencias" src="https://github.com/user-attachments/assets/9bb8c920-4d81-4533-acdc-e47a8ca6262d" />
+	<img width="400" height="500" alt="Bioconductor_Dependencias" src="https://github.com/user-attachments/assets/150ec364-cc2c-47c2-b777-a4b703559363" />
   <p><em>Gráfico de dependencias entre paquetes.</em></p>
 </div>
+
 
 ____________________________________________   
 
 - **GitHub**
 <div align="center">
-	<img width="450" height="650" alt="Github_estrellas" src="https://github.com/user-attachments/assets/e8590284-4a4e-4a35-8824-768926dc0485" />
+	<img width="450" height="650" alt="Github_estrellas" src="https://github.com/user-attachments/assets/26538278-1915-4dd3-ba93-c03753491c4e" />
   <p><em>Gráfico de dispersión temporal del número de estrella en función de la fecha de creación</em></p>
 </div>
+
