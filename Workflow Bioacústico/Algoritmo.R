@@ -1,9 +1,53 @@
-library(readr)  #para leer los ficheros csv
-library(DBI) #para trabajar con bases de datos
-library(RSQLite) #para trabajar con bases de datos dentro de SQLite
-library(dplyr) #para la manipulación de tablas
-library(readxl) #para leer archivos .xlsx y .xls
-library(openxlsx) #para crear, modificar y guardar archivos .xlsx
+paquetes_necesarios <- c(
+  # Lectura de archivos
+  "readr",
+  "readxl",
+
+  # Bases de datos
+  "DBI",
+  "RSQLite",
+
+  # Manipulación de datos
+  "dplyr",
+
+  # Escritura de Excel
+  "openxlsx"
+)
+
+
+#FUNCIÓN PARA INSTALAR Y ACTUALIZAR LOS PAQUETES QUE SE VAN A USAR
+Instalar_Actualizar_Paquetes <- function(
+    pkgs,
+    upgrade = TRUE,
+    dependencies = TRUE,
+    ask = FALSE
+) {
+  stopifnot(is.character(pkgs), length(pkgs) > 0)
+  
+  if (!requireNamespace("pak", quietly = TRUE)) {
+    install.packages("pak", repos = "https://cloud.r-project.org")
+  }
+  
+  pak::pkg_install(
+    pkg = pkgs,
+    upgrade = upgrade,
+    dependencies = dependencies,
+    ask = ask
+  )
+  
+  invisible(pkgs)
+}
+
+#INSTALACIÓN O ACTUALIZACIÓN DE LOS PAQUETES NECESARIOS
+Instalar_Actualizar_Paquetes(pkgs = paquetes_necesarios)
+
+#CARGA DE LOS PAQUETES
+library(readr)
+library(DBI)
+library(RSQLite)
+library(dplyr)
+library(readxl)
+library(openxlsx)
 
 #FUNCIÓN PARA CREAR BASE DE DATOS
 crear_base_de_datos_de_registros <- function(
@@ -127,7 +171,7 @@ crear_base_de_datos_de_registros <- function(
       
     }
     
-    # Insertar todos los registros
+    # Insertamos todos los registros
     dbWriteTable(
       conexion,
       "Registros",
@@ -136,9 +180,9 @@ crear_base_de_datos_de_registros <- function(
     )
   }
   
-  dbDisconnect(conexion) #desconcetamos el entorno de R de la Base de datos
+  dbDisconnect(conexion) #desconectamos el entorno de R de la Base de datos
   
-  return(archivo_sqlite) #devuelve la base de datos que incluye ambas tablas
+  return(archivo_sqlite) 
 }
 
 crear_base_de_datos_de_registros(archivos = "Registros.csv") #prueba con uno de los ficheros
@@ -166,10 +210,10 @@ convertir_datos_BirdNET_plantilla <- function(base_de_datos_sqlite, archivo_plan
   
   # Se escriben las cabeceras de las columnas
   writeData(
-    Excel, #archivo creado
-    "Hoja1", #en la única hoja creada
+    Excel, 
+    "Hoja1",
     as.data.frame(as.list(cabeceras)),
-    startRow = 1, #empezamos la escritura en la primera fila
+    startRow = 1,
     colNames = FALSE
   )
   
@@ -179,7 +223,7 @@ convertir_datos_BirdNET_plantilla <- function(base_de_datos_sqlite, archivo_plan
   conexion <- dbConnect(SQLite(), base_de_datos_sqlite)
   datos <- dbReadTable(conexion, "Registros")
   
-  for (i in seq_len(nrow(datos))) { #recorre las filas
+  for (i in seq_len(nrow(datos))) { 
     
     new_row <- vector("list", length(cabeceras))
     names(new_row) <- cabeceras
@@ -309,9 +353,7 @@ convertir_datos_BirdNET_plantilla <- function(base_de_datos_sqlite, archivo_plan
   
   saveWorkbook(Excel, archivo_salida, overwrite = TRUE) #guardamos el documento generado y la escritura efectuada en el mismo
   
-  return(archivo_salida) #devolvemos el fichero generado
+  return(archivo_salida) 
 }
 
 convertir_datos_BirdNET_plantilla(base_de_datos_sqlite = "BaseDatos_RegistrosBirdNET.sqlite", archivo_plantilla = "plantilla.xlsx") #prueba de llamada con los datos obtenidos
-
-
