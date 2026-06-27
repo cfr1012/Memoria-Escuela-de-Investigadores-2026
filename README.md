@@ -48,7 +48,7 @@ El lenguaje de programación R dispone de un amplio **ecosistema de paquetes** q
 <br clear="left"/>
 
 ### Observatorio de biodiversidad de Aguas de Burgos
-<img align="left" width="300" height="300" alt="Instalación de la caja acústica en ecosistema fluvial" src="[https://github.com/user-attachments/assets/03431d3a-cc92-45e3-89f7-71febf4f54ec](https://drive.google.com/file/d/1ge9ScjiK5SesNZIg_A-93veSHZ8A8-2o/view?usp=sharing)" />
+<img align="left" width="300" height="300" alt="Instalación de la caja acústica en ecosistema fluvial" src="https://github.com/user-attachments/assets/32b7a521-7216-4788-8657-b48a7e8f038a" />
 
 El proyecto de la Universidad de Burgos *"Observatorio de Biodiversidad de Aguas de Burgos (S00D06 - 052/2025)"* tiene como finalidad la monitorización de la evolución de los ecosistemas fluviales de los **ríos Arlanzón, Vena y Ubierna** mediante la recopilación y el análisis de información ambiental. Para ello, contempla el desarrollo de un programa integral de **indicadores de biodiversidad** y de un plan de seguimiento anual que establece los procedimientos de análisis, presentación y divulgación de los resultados obtenidos. 
 
