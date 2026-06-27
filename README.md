@@ -7,7 +7,7 @@ Este repositorio recopila los diversos proyectos, documentos y materiales elabor
 La *Beca de la Escuela de Investigadores de la Universidad de Burgos* es una iniciativa cofinanciada por el **Banco Santander** e impulsada por la **Universidad de Burgos**. Su finalidad es acercar a los estudiantes de grado a la actividad investigadora mediante su **integración activa** en diversos Grupos de Investigación Reconocidos *(GIR)*, promoviendo así la adquisición de competencias científicas y técnicas propias de este ámbito. La estancia en un entorno real de investigación fortalece la formación académica de los estudiantes,  promoviendo el desarrollo de una temprana vocación científica y fomentando la adquisición de competencias relacionadas con la generación de conocimiento, la innovación y la transferencia tecnológica.
 
 ## Grupo de investigación BEST-AI
-<img align="left" width="250" alt="Logotipo GIR" src="https://github.com/user-attachments/assets/ebf6538e-7668-42b6-a304-e9717f00c7a5" />
+<img align="left" width="250" alt="Logotipo GIR" src="https://github.com/user-attachments/assets/0a421c35-603a-4031-82b0-2df34768863c" />
 
 **BEST-AI** *(Biología, Educación y Salud con Tecnologías Avanzadas Informáticas)* es un Grupo de Investigación Reconocido *(GIR)* de la Universidad de Burgos, constituido en el año **2019** y adscrito, principalmente, a los departamentos de **Ingeniería Informática** e **Ingeniería Civil**.
 
@@ -48,7 +48,7 @@ El lenguaje de programación R dispone de un amplio **ecosistema de paquetes** q
 <br clear="left"/>
 
 ### Observatorio de biodiversidad de Aguas de Burgos
-<img align="left" width="300" height="300" alt="Instalación de la caja acústica en ecosistema fluvial" src="https://github.com/user-attachments/assets/03431d3a-cc92-45e3-89f7-71febf4f54ec" />
+<img align="left" width="300" height="300" alt="Instalación de la caja acústica en ecosistema fluvial" src="[https://github.com/user-attachments/assets/03431d3a-cc92-45e3-89f7-71febf4f54ec](https://drive.google.com/file/d/1ge9ScjiK5SesNZIg_A-93veSHZ8A8-2o/view?usp=sharing)" />
 
 El proyecto de la Universidad de Burgos *"Observatorio de Biodiversidad de Aguas de Burgos (S00D06 - 052/2025)"* tiene como finalidad la monitorización de la evolución de los ecosistemas fluviales de los **ríos Arlanzón, Vena y Ubierna** mediante la recopilación y el análisis de información ambiental. Para ello, contempla el desarrollo de un programa integral de **indicadores de biodiversidad** y de un plan de seguimiento anual que establece los procedimientos de análisis, presentación y divulgación de los resultados obtenidos. 
 
